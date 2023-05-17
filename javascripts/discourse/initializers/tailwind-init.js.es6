@@ -19,7 +19,7 @@ function initialize(api) {
 		// Append link element to HTML head
 		assetStylesheets.append(link);
 
-	if (!this.site.mobileView) {
+	if (window.innerWidth > 640) {
 		api.decorateWidget('header-icons:before', helper => {
     
 			return helper.h('span', {
