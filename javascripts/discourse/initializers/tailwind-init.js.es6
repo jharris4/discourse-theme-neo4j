@@ -19,18 +19,25 @@ function initialize(api) {
 		// Append link element to HTML head
 		assetStylesheets.append(link);
 
-  api.decorateWidget('header-icons:before', helper => {
-    return helper.h('span', [
-      helper.h('a', {
-        href:'https://dev.neo4j.com/42KC4ow',
-      }, 'NODES 2023'),
-      ' on Oct. 26. ',
-      helper.h('a', {
-        href:'https://sessionize.com/neo4j-nodes-2023',
-      }, 'Submit Talks'),
-      ' by June 30, 2023'
-    ]);
-  });
+	if (!this.site.mobileView) {
+		api.decorateWidget('header-icons:before', helper => {
+    
+			return helper.h('span', {
+				style: "float: left;"
+			}, [
+			  'Join ',
+			  helper.h('a', {
+				href:'https://dev.neo4j.com/42KC4ow',
+			  }, 'NODES 2023'),
+			  ' on Oct. 26. ',
+			  helper.h('a', {
+				href:'https://sessionize.com/neo4j-nodes-2023',
+			  }, 'Submit Talks'),
+			  ' by June 30, 2023'
+			]);
+		});
+	}
+  
 }
 
 export default {
