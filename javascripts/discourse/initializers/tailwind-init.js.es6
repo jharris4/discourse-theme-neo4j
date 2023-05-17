@@ -19,11 +19,11 @@ function initialize(api) {
 		// Append link element to HTML head
 		assetStylesheets.append(link);
 
-	if (window.innerWidth > 640) {
+	if (window.innerWidth > 800) {
 		api.decorateWidget('header-icons:before', helper => {
     
 			return helper.h('span', {
-				style: "float: left;"
+				style: "float:left; height:2.2857em; line-height:2.2857em; padding-right:20px; padding-top:.2143em;"
 			}, [
 			  'Join ',
 			  helper.h('a', {
