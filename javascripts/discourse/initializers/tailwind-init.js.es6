@@ -29,7 +29,7 @@ function initialize(api) {
 			  helper.h('a', {
 				href:'https://dev.neo4j.com/42KC4ow',
 			  }, 'NODES 2023'),
-			  ' on Oct. 26.'
+			  ' on Oct. 26. Hi Yollande!'
 			]);
 		});
 	}
