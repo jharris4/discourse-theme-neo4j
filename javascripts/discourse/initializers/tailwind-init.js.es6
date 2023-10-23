@@ -35,7 +35,7 @@ function initialize(api) {
 	const pageUrl = window.location.href;
 	const pathIndex = pageUrl.indexOf("/");
 	const queryIndex = pageUrl.indexOf("?");
-	const pagePath = pathIndex >= 0 ? pageUrl.substring(pathIndex, queryIndex >= 0 ? queryIndex, pageUrl.length) : "/";
+	const pagePath = pathIndex >= 0 ? pageUrl.substring(pathIndex, queryIndex >= 0 ? queryIndex : pageUrl.length) : "/";
 	console.log("@@@@ Page Path: " + pagePath);
 	if (pagePath === "/") {
 		api.decorateWidget('header:after', helper => {
