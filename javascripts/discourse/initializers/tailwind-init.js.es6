@@ -34,7 +34,7 @@ function initialize(api) {
 	}
 
 	if (window.location.pathname === "/") {
-		api.decorateWidget('header:after', helper => {
+		api.decorateWidget('post-menu:after', helper => {
 			console.log("#### onPageChange for Homepage decorate callback: ", helper);
 			return helper.h('div', {
 				'class': "header-after-foo",
