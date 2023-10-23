@@ -21,26 +21,10 @@ function initialize(api) {
 
 	if (window.innerWidth > 800) {
 		api.decorateWidget('header-icons:before', helper => {
-			console.log("$$$$ first one worked!!!!");
 			return helper.h('span', {
 				style: "float:left; height:2.2857em; line-height:2.2857em; padding-right:30px; padding-top:.2143em;"
 			}, [
 				'NODES 2023 Is on October 26th, and You’re Invited! ',
-				helper.h('a', {
-					href:'https://dev.neo4j.com/3PWWB5a',
-				}, 'Save your seat')
-			]);
-		});
-	}
-
-	if (window.location.pathname === "/") {
-		console.log("#### Homepage");
-		api.decorateWidget('main:before', helper => {
-			console.log("#### Homepage decorate callback: ", helper);
-			return helper.h('div', {
-				'style': "display: block;",
-			}, [
-				'NEW AFTER HEADER CONTENT ',
 				helper.h('a', {
 					href:'https://dev.neo4j.com/3PWWB5a',
 				}, 'Save your seat')
