@@ -40,7 +40,7 @@ function initialize(api) {
 		if (urlPath == "/") {
 			console.log("%%%% onPageChange for Homepage");
 			// above-main-container
-			api.decorateWidget('header-icons:after', helper => {
+			api.decorateWidget('header-icons:before', helper => {
 				console.log("#### onPageChange for Homepage decorate callback: ", helper);
 				return helper.h('span', {
 					class: "header-after-foo",
