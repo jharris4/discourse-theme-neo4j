@@ -34,6 +34,7 @@ function initialize(api) {
 	}
 
 	api.onPageChange((url, _title) => {
+		console.log("%%%% onPageChange: " + url);
 		if (url == "/") {
 			// above-main-container
 			api.decorateWidget('header:after', helper => {
