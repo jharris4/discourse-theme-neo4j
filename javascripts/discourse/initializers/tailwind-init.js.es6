@@ -40,18 +40,19 @@ function initialize(api) {
 		if (urlPath == "/") {
 			console.log("%%%% onPageChange for Homepage");
 			// above-main-container
-			// api.decorateWidget('header-icons:before', helper => {
-			// 	console.log("#### onPageChange for Homepage decorate callback: ", helper);
-			// 	return helper.h('span', {
-			// 		class: "header-after-foo",
-			// 		style: "float:left; height:2.2857em; line-height:2.2857em; padding-right:30px; padding-top:.2143em;"
-			// 	}, [
-			// 		'NEW AFTER HEADER CONTENT ',
-			// 		helper.h('a', {
-			// 			href:'https://dev.neo4j.com/3PWWB5a',
-			// 		}, 'Save your seat')
-			// 	]);
-			// });
+			debugger;
+			api.decorateWidget('header-icons:before', helper => {
+				console.log("#### onPageChange for Homepage decorate callback: ", helper);
+				return helper.h('span', {
+					class: "header-after-foo",
+					style: "float:left; height:2.2857em; line-height:2.2857em; padding-right:30px; padding-top:.2143em;"
+				}, [
+					'NEW AFTER HEADER CONTENT ',
+					helper.h('a', {
+						href:'https://dev.neo4j.com/3PWWB5a',
+					}, 'Save your seat')
+				]);
+			});
 		}
 	})
 }
