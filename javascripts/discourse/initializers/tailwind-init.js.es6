@@ -34,7 +34,6 @@ function initialize(api) {
 	}
 
 	api.onPageChange((url, _title) => {
-		console.log("%%%% onPageChange: " + url);
 		const queryIndex = url.indexOf("?");
 		const urlPath = queryIndex >= 0 ?  url.substring(0, queryIndex) : url;
 		console.log("%%%% onPageChange: " + urlPath + " - " + url);
@@ -43,6 +42,7 @@ function initialize(api) {
 			api.decorateWidget('header:after', helper => {
 
 				return helper.h('span', {
+					class: "header-after-foo",
 					style: "float:left; height:2.2857em; line-height:2.2857em; padding-right:30px; padding-top:.2143em;"
 				}, [
 					'NEW AFTER HEADER CONTENT ',
