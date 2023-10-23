@@ -36,8 +36,8 @@ function initialize(api) {
 	if (window.location.pathname === "/") {
 		api.decorateWidget('header:after', helper => {
 			console.log("#### onPageChange for Homepage decorate callback: ", helper);
-			return helper.h('span', {
-				class: "header-after-foo",
+			return helper.h('div', {
+				'class': "header-after-foo",
 				style: "float:left; height:2.2857em; line-height:2.2857em; padding-right:30px; padding-top:.2143em;"
 			}, [
 				'NEW AFTER HEADER CONTENT ',
