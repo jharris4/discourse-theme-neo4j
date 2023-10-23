@@ -34,6 +34,16 @@
 
     </section>
 
+    <section id="neo4j-post-header-content"></section>
+
 </div>
+
+<script>
+    window.addEventListener('DOMContentLoaded',function () {
+        if (window.location.pathname === "/") {
+            document.querySelector("#neo4j-post-header-content").innerHTML = "Hello!!!";
+        }
+    });
+</script>
 
 <a class="mt-4" id="jumpPoint" name="jumpPoint">&nbsp;</a>
