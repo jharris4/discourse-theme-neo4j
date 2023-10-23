@@ -32,29 +32,25 @@ function initialize(api) {
 			]);
 		});
 	}
-
-	api.onPageChange((url, _title) => {
-		const queryIndex = url.indexOf("?");
-		const urlPath = queryIndex >= 0 ?  url.substring(0, queryIndex) : url;
-		console.log("%%%% onPageChange: " + urlPath + " - " + url);
-		if (urlPath == "/") {
-			console.log("%%%% onPageChange for Homepage");
-			// above-main-container
-			debugger;
-			api.decorateWidget('header-icons:before', helper => {
-				console.log("#### onPageChange for Homepage decorate callback: ", helper);
-				return helper.h('span', {
-					class: "header-after-foo",
-					style: "float:left; height:2.2857em; line-height:2.2857em; padding-right:30px; padding-top:.2143em;"
-				}, [
-					'NEW AFTER HEADER CONTENT ',
-					helper.h('a', {
-						href:'https://dev.neo4j.com/3PWWB5a',
-					}, 'Save your seat')
-				]);
-			});
-		}
-	})
+	const pageUrl = window.location.href;
+	const pathIndex = pageUrl.indexOf("/");
+	const queryIndex = pageUrl.indexOf("?");
+	const pagePath = pathIndex >= 0 ? pageUrl.substring(pathIndex, queryIndex >= 0 ? queryIndex, pageUrl.length) : "/";
+	console.log("@@@@ Page Path: " + pagePath);
+	if (pagePath === "/") {
+		api.decorateWidget('header:after', helper => {
+			console.log("#### onPageChange for Homepage decorate callback: ", helper);
+			return helper.h('span', {
+				class: "header-after-foo",
+				style: "float:left; height:2.2857em; line-height:2.2857em; padding-right:30px; padding-top:.2143em;"
+			}, [
+				'NEW AFTER HEADER CONTENT ',
+				helper.h('a', {
+					href:'https://dev.neo4j.com/3PWWB5a',
+				}, 'Save your seat')
+			]);
+		});
+	}
 }
 
 export default {
