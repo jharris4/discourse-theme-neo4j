@@ -252,7 +252,11 @@ $(document).ready(pageReady);
 
 <script type="text/discourse-plugin" version="0.8">
     api.onPageChange((url, title) => {
-        document.querySelector("#neo4j-post-header-content").innerHTML = window.location.pathname;
+        let content = "";
+        if (window.location.pathname === "/") {
+            content = "HOME";
+        }
+        document.querySelector("#neo4j-post-header-content").innerHTML = content;
     });
 </script>
 
