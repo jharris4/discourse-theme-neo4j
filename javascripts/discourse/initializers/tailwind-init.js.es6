@@ -21,7 +21,7 @@ function initialize(api) {
 
 	if (window.innerWidth > 800) {
 		api.decorateWidget('header-icons:before', helper => {
-
+			console.log("$$$$ first one worked!!!!");
 			return helper.h('span', {
 				style: "float:left; height:2.2857em; line-height:2.2857em; padding-right:30px; padding-top:.2143em;"
 			}, [
