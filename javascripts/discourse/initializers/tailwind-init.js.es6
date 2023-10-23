@@ -41,7 +41,7 @@ function initialize(api) {
 			console.log("%%%% onPageChange for Homepage");
 			// above-main-container
 			api.decorateWidget('header:after', helper => {
-
+				console.log("#### onPageChange for Homepage decorate callback: ", helper);
 				return helper.h('span', {
 					class: "header-after-foo",
 					style: "float:left; height:2.2857em; line-height:2.2857em; padding-right:30px; padding-top:.2143em;"
