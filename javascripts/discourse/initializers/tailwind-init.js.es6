@@ -35,7 +35,7 @@ function initialize(api) {
 
 	if (window.location.pathname === "/") {
 		console.log("#### Homepage");
-		api.decorateWidget('header:after', helper => {
+		api.decorateWidget('main:before', helper => {
 			console.log("#### Homepage decorate callback: ", helper);
 			return helper.h('div', {
 				'style': "display: block;",
