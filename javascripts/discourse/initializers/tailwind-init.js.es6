@@ -35,10 +35,10 @@ function initialize(api) {
 
 	if (window.location.pathname === "/") {
 		console.log("#### Homepage");
-		api.decorateWidget('content:before', helper => {
+		api.decorateWidget('header:after', helper => {
 			console.log("#### Homepage decorate callback: ", helper);
 			return helper.h('div', {
-				'class': "header-after-foo",
+				'style': "display: block;",
 			}, [
 				'NEW AFTER HEADER CONTENT ',
 				helper.h('a', {
