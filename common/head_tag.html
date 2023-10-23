@@ -252,8 +252,9 @@ $(document).ready(pageReady);
   
 <script>
     window.addEventListener('DOMContentLoaded',function () {
+        document.querySelector("#neo4j-post-header-content").innerHTML = "<div>" + window.location.pathname + "</div>";
         if (window.location.pathname === "/") {
-            document.querySelector("#neo4j-post-header-content").innerHTML = window.location.pathname;
+            // document.querySelector("#neo4j-post-header-content").innerHTML = window.location.pathname;
         }
     });
     
