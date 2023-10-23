@@ -249,10 +249,16 @@ $(document).ready(pageReady);
     analytics.load("qm4hKrqjovdrBgsCssvoVUbMFFnlFag8");
     }}();
   </script>
-  
+
+<script type="text/discourse-plugin" version="0.8">
+    api.onPageChange((url, title) => {
+        document.querySelector("#neo4j-post-header-content").innerHTML = window.location.pathname;
+    });
+</script>
+
 <script>
     window.addEventListener('DOMContentLoaded',function () {
-        document.querySelector("#neo4j-post-header-content").innerHTML = "<div>" + window.location.pathname + "</div>";
+        // document.querySelector("#neo4j-post-header-content").innerHTML = "<div>" + window.location.pathname + "</div>";
         if (window.location.pathname === "/") {
             // document.querySelector("#neo4j-post-header-content").innerHTML = window.location.pathname;
         }
