@@ -35,7 +35,10 @@ function initialize(api) {
 
 	api.onPageChange((url, _title) => {
 		console.log("%%%% onPageChange: " + url);
-		if (url == "/") {
+		const queryIndex = url.indexOf("?");
+		const urlPath = queryIndex >= 0 ?  url.substring(0, queryIndex) : url;
+		console.log("%%%% onPageChange: " + urlPath + " - " + url);
+		if (urlPath == "/") {
 			// above-main-container
 			api.decorateWidget('header:after', helper => {
 
