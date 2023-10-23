@@ -38,7 +38,6 @@ function initialize(api) {
 			console.log("#### onPageChange for Homepage decorate callback: ", helper);
 			return helper.h('div', {
 				'class': "header-after-foo",
-				style: "float:left; height:2.2857em; line-height:2.2857em; padding-right:30px; padding-top:.2143em;"
 			}, [
 				'NEW AFTER HEADER CONTENT ',
 				helper.h('a', {
