@@ -35,7 +35,7 @@ function initialize(api) {
 
 	if (window.location.pathname === "/") {
 		console.log("#### Homepage");
-		api.decorateWidget('post-menu:after', helper => {
+		api.decorateWidget('body:before', helper => {
 			console.log("#### Homepage decorate callback: ", helper);
 			return helper.h('div', {
 				'class': "header-after-foo",
