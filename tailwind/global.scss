@@ -41,6 +41,12 @@
   }
 }
 
+#neo4j-post-header-content .news-column,
+#neo4j-post-header-content .announcements-column {
+  display: inline-block;
+  max-width: 50%;
+  width: 50%;
+}
 
 .topic-body .cooked {
   @apply prose dark:prose-dark dark:bg-transparent;
